@@ -1,9 +1,9 @@
-Name,Offered By,Shiny
-Bulbasaur,Ash Ketchum, False
-Charmander,Gary Oak, False
-Squirtle,Misty, False
-Pikachu,Red, False
-Eevee,May, True
-Jigglypuff,JigglypuffLover, False
-Vulpix,Brock, False
-Machop,Champion Blue, False
+Name,OfferedBy,Shiny
+Bulbasaur,Ash Ketchum,True
+Charmander,Gary Oak,True
+Squirtle,Misty,False
+Pikachu,Red,False
+Eevee,May,True
+Jigglypuff,JigglypuffLover,False
+Vulpix,Brock,True
+Machop,Champion Blue,False
