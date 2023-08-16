@@ -83,14 +83,14 @@ button:hover {
   </tbody>
 </table>
 
-  <script>
-    async function fetchCSVData() {
-      try {
-        const response = await fetch('https://raw.githubusercontent.com/crysal/glowing-winner/main/pokemon_data.csv');
-        const data = await response.text();
-        const rows = data.split('\n');
+<script>
+  async function fetchCSVData() {
+    try {
+      const response = await fetch('https://raw.githubusercontent.com/crysal/glowing-winner/main/pokemon_data.csv');
+      const data = await response.text();
+      const rows = data.split('\n');
 
-        const tableBody = document.querySelector('#tradeTable tbody');
+      const tableBody = document.querySelector('#tradeTable tbody');
 
       for (let i = 1; i < rows.length; i++) {
         const columns = rows[i].split(',');
@@ -101,16 +101,16 @@ button:hover {
           newRow.innerHTML = `
             <td>${name}</td>
             <td>${offeredBy}</td>
-            <td>${shiny}</td>
+            <td>${shiny.trim().toLowerCase() === 'true' ? '✔' : '✘'}</td>
           `;
 
-            tableBody.appendChild(newRow);
-          }
+          tableBody.appendChild(newRow);
         }
-      } catch (error) {
-        console.error('Error fetching CSV data:', error);
       }
+    } catch (error) {
+      console.error('Error fetching CSV data:', error);
     }
+  }
 
     function searchPokemon() {
       const searchTerm = document.getElementById("search").value.toLowerCase();
